@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Random Dog Generator">
+    <meta name="keywords" content="HTML, CSS, JavaScript, VueJS">
+    <meta name="author" content="Dawn">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="icon" href="dog.png" type="image/png" sizes="16x16">
+    <title>Random Dog Generator</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <button v-on:click="fetchRandomDog" class="btn btn-info">Random Dog Generator</button>
+            <div class="info">
+                <h1>Dog Name : </h1>
+                <p>{{ dogname }}</p>
+                <h2>Bred For : </h2>
+                <p>{{ bredfor }}</p>
+                <h2>Breed Group : </h2>
+                <p>{{ breedgroup }}</p>
+                <h2>Height in metric : </h2>
+                <p>{{ heightinmetric }}</p>
+                <h2>Lifespan: </h2>
+                <p>{{ lifespan }}</p>
+                <h2>Breedgroup : </h2>
+                <p>{{ breedgroup }}</p>
+                <h2>Temperament : </h2>
+                <p>{{ temperament }}</p>
+                <h2>Weight in Metric : </h2>
+                <p>{{ weightinmetric }}</p>
+            </div>
+
+            <div class="dogimage">
+                <img v-bind:src="src" v-bind:alt="dogname" width="600" />
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
